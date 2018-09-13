@@ -16,3 +16,8 @@
 
 4. Loss Function vs Cost Function:
   - The loss function computes the error for a single training example; the cost function is the average of the loss functions of the entire training set.
+  
+5. Initialization:
+  - w for hidden layer -- cannot just set np.zeros() --> after iteration, the w[i][1] & w[i][2] will always be symetric (*need to be proov*)
+  - so need to initialize randomly, start with a small number (0.01) -> Why small value? w big -> z big -> large value in sigmoid/tanh function -> small grdient --> very slow when iterating
+  - b can be set 0 when initialization
