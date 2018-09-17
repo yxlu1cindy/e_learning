@@ -1,6 +1,7 @@
 1. Why deep-learning?
   - perform better on large dataset
   - perform better when large NN
+  - first layer(detecting edges)->following layers: (combine edges)
 
 2. Activataion Function: 
   - Why non-linear:
@@ -21,3 +22,13 @@
   - w for hidden layer -- cannot just set np.zeros() --> after iteration, the w[i][1] & w[i][2] will always be symetric (*need to be proov*)
   - so need to initialize randomly, start with a small number (0.01) -> Why small value? w big -> z big -> large value in sigmoid/tanh function -> small grdient --> very slow when iterating
   - b can be set 0 when initialization
+
+6. Construction:
+  - a "small" L-layer deep NN <-> a shallower network withwxponentially more hidden units
+  - ? Can this be another reason why deep neutral network works better? A simple regression/classification can be seen a one-layer NN, which requires more para to get the same performance than a deep NN (Personal Understanding)
+
+7. hyperparameter vs parameter:
+  - parameter : w, b
+  - hyperparameter: learning rates & # of iteration in gradint descent, L, number of hidden units, choice of activation function
+  - hyperparameter determins the value of parameters
+*DMH*
