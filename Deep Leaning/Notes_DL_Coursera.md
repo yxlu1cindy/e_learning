@@ -40,7 +40,10 @@
 1. Data split:   
   - traditionally: 70%/30%(train/test),60%/40%/40%(train,dev(validation),test)
   - big data: if you have 1,000,000 data, you may only need 10000 to dev set and 10000 to test set. so 98%/1%/1% is also acceptable
+  - size of test set :big enough to give you high confidence in the overall performance of the system
   - data for dev and test must from same data sourse, which means same distribution. But training set can use another dataset, because we choose the algorithms based on the performance of the dev set
+  - Function: training set - train model; dev set - compare different model and choose the best one; test set - make a unbias estimation on the performance
+  
  
 2. Bias and Variance (trade-off)   
   - Assumptions 1: 
@@ -113,7 +116,7 @@
   - Use a single number evaluation matric(try to set only one criterion to select better model):   
     - if use a confusion matrix:     
      | Tables    | Precision  | Recall|     
-     | --------- |:----------:| -----:|    
+     | ----------|:----------:| -----:|    
      | Model A   | 95%        |  90%  |    
      | Model B   | 98%        |  85%  |    
     
@@ -128,3 +131,9 @@
      - sometimes, we may find it is hard to combine two criterions to one index, then we may use satisficing and optimizing metrics
      - find min(Accuracy) condition on the running time smaller than t
       
+3. Comparing to human-level performance:
+  - algorithms should be better than human performance , but alway poorer than Bayes Optimal Error
+  - sometimes, we will seem human level error as an estimation of Bayes Optimal Error
+  - human do well on unstructures data(language, picture,...)
+  
+4. Avoidable Bias: training error - Bayes Optimal Error
