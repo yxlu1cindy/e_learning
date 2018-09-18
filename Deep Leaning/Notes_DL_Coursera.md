@@ -112,18 +112,18 @@
 2. How to choose a better model
   - Use a single number evaluation matric(try to set only one criterion to select better model):   
     - if use a confusion matrix:     
-     | Tables    | Precision  | Recall|
-     | --------- |:----------:| -----:|
-     | Model A   | 95%        |  90%  |
-     | Model B   | 98%        |  85%  |
+     | Tables    | Precision  | Recall|     
+     | --------- |:----------:| -----:|    
+     | Model A   | 95%        |  90%  |    
+     | Model B   | 98%        |  85%  |    
     
     - Problem: Note sure wich is better
     - so we can use F1 score ( a combination of precision and recall)
   - satisficing and optimizing metrics:     
-     | Tables    | Accuracy   | running time|
-     | --------- |:----------:| -----------:|
-     | Model A   | 95%        |  90ms       |
-     | Model B   | 98%        |  85ms       |
+     | Tables    | Accuracy   | running time|    
+     | --------- |:----------:| -----------:|    
+     | Model A   | 95%        |  90ms       |    
+     | Model B   | 98%        |  85ms       |    
      
      - sometimes, we may find it is hard to combine two criterions to one index, then we may use satisficing and optimizing metrics
      - find min(Accuracy) condition on the running time smaller than t
