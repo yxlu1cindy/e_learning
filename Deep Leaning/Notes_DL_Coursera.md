@@ -24,6 +24,7 @@
   - so need to initialize randomly, start with a small number (0.01) -> Why small value? w big -> z big -> large value in sigmoid/tanh function -> small grdient --> very slow when iterating
   - b can be set 0 when initialization
   - *He initialization* ( He et al., 2015) -> He initialization works well for networks with ReLU activations.
+  - Xaivers -> Xaivers initialization works well for networks with tanh activations.
 
 6. Construction:
   - a "small" L-layer deep NN <-> a shallower network withwxponentially more hidden units
@@ -103,4 +104,13 @@
   - normalize the input data on the whole dataset (don't first split to train/dev!) -> helps gradient descent (learning rate)
   
 6. Vanishing/exploding gradient (梯度消失/梯度爆炸）
-  - 
+  -  if have a deep NN, 0.9^200 very small, 1.1^200 very large
+
+<h2> Course 3 </h2>
+1. ML Strategy: fit training set will -> fit dev set will -> fit testing set will -> performs well
+
+2. Use a single number evaluation matric:
+    | Tables    | Precision  | Recall|
+    | --------- |:----------:| -----:|
+    | Model A   | 95%        |  90%  |
+    | Model B   | 98%        |  85%  |
