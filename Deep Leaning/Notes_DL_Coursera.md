@@ -1,3 +1,4 @@
+<h2> Course 1 </h2>
 1. Why deep-learning?
   - perform better on large dataset
   - perform better when large NN
@@ -32,3 +33,9 @@
   - hyperparameter: learning rates & # of iteration in gradint descent, L, number of hidden units, choice of activation function
   - hyperparameter determins the value of parameters
 *DMH*
+
+<h2> Course 2 </h2>
+1. Data split:
+  - traditionally: 70%/30%(train/test),60%/40%/40%(train,validate,test)
+  - big data: if you have 1,000,000 data, you may only need 10000 to validate and 10000 to test. so 98%/1%/1% is also acceptable
+  - data for validation and test must from same data sourse, which means same distribution. But training set can use another dataset, because we choose the algorithms based on the performance of the validation set
