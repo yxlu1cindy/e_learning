@@ -162,3 +162,14 @@
   - Same Convolution: input size = output size
   - Strided Convolution
 
+5. Pooling:
+  - Why pooling?
+    -
+  - max pooling (prefer) - generally not use padding
+    - have hyperparameter , but no parameter to learn
+  - average pooling - generally not use padding
+    - have hyperparameter , but no parameter to learn
+    
+6. CNN Model   
+  - number of filter will increase through each layer
+*LeNet5* 
