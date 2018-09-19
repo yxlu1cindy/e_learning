@@ -109,6 +109,25 @@
 6. Vanishing/exploding gradient (梯度消失/梯度爆炸）
   -  if have a deep NN, 0.9^200 very small, 1.1^200 very large
 
+7. Minibatch:
+  - Why Minibatch?
+    - Train model more quickly
+  - Mini Batch Gradient Descent
+    - for each small batch, run Gradient Descent and get W[t] & b[t], use this parameter as the initial value in next small batch
+  - cost function will not monotonic decreasing (iteration) <- training on different data set
+  - How to choose MiniBatch Size?
+    - if training set is small, then don't use mini batch
+    - Typically, use a minibatch size between 64 - 512
+  - How to tune the MiniBatch Size?
+    - Goal:find a size that reduce the cost function more quickly
+
+8. Optimization Algorithms:
+  - Gradient Descent
+  - Momentum
+  
+Exponentially weighted averages
+
+
 <h2> Course 3 </h2>
 1. ML Strategy: fit training set will -> fit dev set will -> fit testing set will -> performs well
 
