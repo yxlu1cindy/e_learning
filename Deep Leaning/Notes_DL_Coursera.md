@@ -137,3 +137,28 @@
   - human do well on unstructures data(language, picture,...)
   
 4. Avoidable Bias: training error - Bayes Optimal Error
+
+<h2> Course 4 </h2> - Convolutional Neural Networks
+1. Computer Vision: if a picture is 1000 * 1000, then the input layer will be very large, and the weight matrix is also very large. In order to solve such problem, comes up the idea of Convolutional Neural Networks.
+
+2. Edge Detection
+  - Vertical edges
+  - horizontal edges
+  - Different types of filter: (Vertical)
+    - Sobel Filter : [[1,0,-1],[2,0,-2],[1,0,-1]]
+    - Scharr Filter: [[3,0,-3],[10,0,-10],[3,0,-3]]
+    - using backfoward to get the filter
+
+3. Padding
+  - Why Padding: 
+    - When doing the edge detection, the element in the corners only be use few times, while the elements in the center will be uses for couple times -> lose the information in the corner
+    - If you have a deep NN, then through each detection, you will get a small image -> get a very small image after the whole proess
+  - What is Padding:
+    - Add n new columns/rows with elements 0 : if n = 1, then a 6 * 6 matrix -> after padding -> 8 * 8 matrix -> after convolution (3 * 3) -> a 6 * 6 image
+    
+    
+4. Valid Convolution VS Same Concolution:
+  - Valid Convolution: no padding
+  - Same Convolution: input size = output size
+  - Strided Convolution
+
