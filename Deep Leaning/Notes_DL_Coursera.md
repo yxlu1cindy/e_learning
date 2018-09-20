@@ -123,8 +123,12 @@
 
 8. Optimization Algorithms:
   - Gradient Descent
-  - Momentum
+  - Momentum -> generally ,\beta=0.9
+  - RMSprop - increase learning on w direction, slow down oscilliation on b direction -> dW small, db larger,generally ,\beta=0.999,\eybsilon = 10 ^(-8)
+  - Adam optimization <- combined momentun & RMSprop
   
+9 Learning rate decay:
+  - slowly reduce learning rate \alpha after iteration
 Exponentially weighted averages
 
 
