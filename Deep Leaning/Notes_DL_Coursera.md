@@ -221,4 +221,11 @@ Exponentially weighted averages
     
 6. CNN Model   
   - number of filter will increase through each layer
-*LeNet5* 
+
+7. Classic CNN Model:
+  - LeNet-5
+  - AlexNet
+  - VGG
+ResNet
+Inception
+
