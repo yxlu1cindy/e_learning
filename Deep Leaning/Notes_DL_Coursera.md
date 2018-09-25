@@ -42,6 +42,7 @@
   - big data: if you have 1,000,000 data, you may only need 10000 to dev set and 10000 to test set. so 98%/1%/1% is also acceptable
   - size of test set :big enough to give you high confidence in the overall performance of the system
   - data for dev and test must from same data sourse, which means same distribution. But training set can use another dataset, because we choose the algorithms based on the performance of the dev set
+  - 
   - Function: training set - train model; dev set - compare different model and choose the best one; test set - make a unbias estimation on the performance
   
  
@@ -161,6 +162,31 @@ Exponentially weighted averages
   
 4. Avoidable Bias: training error - Bayes Optimal Error
 
+5. Cleaning incorrect labeling data (消除人为label的问题)
+  - the wrong label is in training set, it's okay. ML is robust to random errors in training set
+  - when evaluating dev/test set: add a column to count incorrected label
+
+6. Bias and Variance with mismatch datadistributions:
+  - if training set and dev/test set use different source of data, then it is hard to decide whenther the diff of error rate is caused by high-variance or by different distribution
+    - How to solve: create a training-dev set and check the error rate on training & training-dev set &dev set:
+      - if the diff between training & training-dev set is big, then cause by high variance
+      - if the diff between dev & training-dev set is big, then cause by data mismatch
+      
+ 7 How to solve data mismatch problem?
+    - Find what cause the mismatch pronlem
+    - add similar noise
+ 
+ 8. Transfer Learning:
+  - just reset the weight in last layer, use other pree-trained weight as new intial value and retrain
+  - assumptions: 
+      - transfer from a large dataset to a smaller dataset
+      - have same input
+      
+9. multi-task learning
+  - change the dimension of y, then we can train multi task simultaneously
+  
+10 end-to-end dl
+  - 
 <h2> Course 4 </h2> - Convolutional Neural Networks
 1. Computer Vision: if a picture is 1000 * 1000, then the input layer will be very large, and the weight matrix is also very large. In order to solve such problem, comes up the idea of Convolutional Neural Networks.
 
