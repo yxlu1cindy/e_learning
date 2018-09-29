@@ -229,3 +229,14 @@ Exponentially weighted averages
 ResNet
 Inception
 
+<h2> Course 5 </h2> - Sequence Models
+1. RNN:
+  - gradient vanishing:(hard to solve and detect)
+    - hard to capture long-term denpendence
+    - Solution:
+      - Gated Recurrent Unit(GRU)
+      - LSTM
+  - gradient explosion:(easy to detect)
+    - solution: gradient clipping :当梯度大于某个值的时候，对其进行缩小
+    
+    
