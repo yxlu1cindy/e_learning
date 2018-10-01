@@ -139,6 +139,9 @@ Exponentially weighted averages
 11. Approriate scale of htperparameters:
   - search on a log scale: eg(0.0001 - 1,do not sample uniformely, use log to separate 0.0001,0.001,0.01,0.1,1) <- random sample r in [0,4], set para = 10 ^ r
 
+12. batch normalization:
+  - given some intermediae variables in the hedden layer(z[1],z[2],...), z_new = \gamma * z_norm + \beta
+  - if normalized, then there is no need for b_i
 <h2> Course 3 </h2>
 1. ML Strategy: fit training set will -> fit dev set will -> fit testing set will -> performs well
 
