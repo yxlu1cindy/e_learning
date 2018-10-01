@@ -132,6 +132,12 @@
   - slowly reduce learning rate \alpha after iteration
 Exponentially weighted averages
 
+10. Hyperparameters tuning: (Don't use grid)
+  - use RandomizedSearch
+  - coarse the fine
+
+11. Approriate scale of htperparameters:
+  - search on a log scale: eg(0.0001 - 1,do not sample uniformely, use log to separate 0.0001,0.001,0.01,0.1,1) <- random sample r in [0,4], set para = 10 ^ r
 
 <h2> Course 3 </h2>
 1. ML Strategy: fit training set will -> fit dev set will -> fit testing set will -> performs well
