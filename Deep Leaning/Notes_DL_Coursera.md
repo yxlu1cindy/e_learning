@@ -257,6 +257,8 @@ Inception
   - S2: move the small window -> put it into CNN model -> whether contains an objection
   - S3: stop iter 2 until search every region in the picture
   - S4: use a larger window to inter s1,s2,s3
+  - Problem: bound box -> there may not exsiting a box that contains the whole objective
+  - Solution: Yolo algorithms
 
 
 <h2> Course 5 </h2> - Sequence Models
