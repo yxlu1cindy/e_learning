@@ -246,6 +246,19 @@ Exponentially weighted averages
 ResNet
 Inception
 
+8. Localization (定位）-> one object in a picture
+  - (bx,by) : center point, (b_h,bw): height and width of the object
+
+9. Lankmark Detection:
+  - pc->detect whether the picture is you want to detect landmark,(l_!x,l_1y),(l_2x,l_2y),......,(l_nx,l_ny), if you need to detect n landmarks
+  
+10. Object Detection: (sliding window detection -> conputational cost is high)
+  - S1: cut a small window in the original picture -> put it into CNN model -> whether contains an objection
+  - S2: move the small window -> put it into CNN model -> whether contains an objection
+  - S3: stop iter 2 until search every region in the picture
+  - S4: use a larger window to inter s1,s2,s3
+
+
 <h2> Course 5 </h2> - Sequence Models
 1. RNN:
   - gradient vanishing:(hard to solve and detect)
