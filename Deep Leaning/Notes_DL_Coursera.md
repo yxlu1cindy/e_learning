@@ -142,6 +142,14 @@ Exponentially weighted averages
 12. batch normalization:
   - given some intermediae variables in the hedden layer(z[1],z[2],...), z_new = \gamma * z_norm + \beta
   - if normalized, then there is no need for b_i
+  
+13. Softmax:
+  - a expansion of binary classification -> multi-label classification
+  - an activation function
+  - Loss Function for softmax function:
+    - L(\hat y,y)=- \sum_i(y_i log(y_i)) <- i is # of classification (also is an expansion of logistic)
+  
+  
 <h2> Course 3 </h2>
 1. ML Strategy: fit training set will -> fit dev set will -> fit testing set will -> performs well
 
