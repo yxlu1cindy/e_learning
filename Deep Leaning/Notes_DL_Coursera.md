@@ -254,13 +254,28 @@ Inception
   
 10. Object Detection: (sliding window detection -> conputational cost is high)
   - S1: cut a small window in the original picture -> put it into CNN model -> whether contains an objection
-  - S2: move the small window -> put it into CNN model -> whether contains an objection
+  - S2: move the small window/grid -> put it into CNN model -> whether contains an objection
   - S3: stop iter 2 until search every region in the picture
   - S4: use a larger window to inter s1,s2,s3
   - Problem: bound box -> there may not exsiting a box that contains the whole objective
   - Solution: Yolo algorithms
 
+11. Intersection over Union(IoU):
+  - ratio = S_intersect/S_union, if ratio > a threshold, then the localization is correct
 
+12. Non-max Suppresion
+  - S1: run model on each grid and get prediction p
+  - S2: discard all boxes p <= 0.6
+  - S3: pick the boxes with highest p as a prediction
+  - S4: discard any boxes that have a IoU >= 0.5
+  
+13. Anchor boxes:
+  - problems for box above: can only predict the p of one type of objectives
+  - create multiple different shape anchor boxes anf concate the prediction output
+  - pitfall: if two objecyive need same shape anchor box
+
+14. YOLO Algorithms:
+  -  combine 10 - 13
 <h2> Course 5 </h2> - Sequence Models
 1. RNN:
   - gradient vanishing:(hard to solve and detect)
