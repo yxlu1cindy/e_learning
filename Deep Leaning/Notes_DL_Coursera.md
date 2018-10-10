@@ -276,6 +276,20 @@ Inception
 
 14. YOLO Algorithms:
   -  combine 10 - 13
+  
+15 Face Verification:
+  - Input: image & name/id
+  - Goal: whether the image is the person
+
+16 Fave Recognition:
+  - Input: image
+  - Goal: output the name/id of the person
+  
+17 One-shot learning(一个人只有一张图片来训练）：
+  Goal: learning a similarity function : d(img1,img2)
+  
+18 Siamese Network
+
 <h2> Course 5 </h2> - Sequence Models
 1. RNN:
   - gradient vanishing:(hard to solve and detect)
