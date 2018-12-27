@@ -20,14 +20,17 @@ Shell:
 In Commander
 mongo "mongodb://cluster0-shard-00-00-jxeqq.mongodb.net:27017,cluster0-shard-00-01-jxeqq.mongodb.net:27017,cluster0-shard-00-02-jxeqq.mongodb.net:27017/test?replicaSet=Cluster0-shard-0" --authenticationDatabase admin --ssl --username m001-student --password m001-mongodb-basics
 
-> use video ->switch database
-> show collwctions -> show all tables under the database
-> db.movies.find({"mpaaRating":"PG-13"}).pretty() -> show records in the movie table by mpaaRating filters
-> db.movies.find({"mpaaRating":"PG-13"}).count() -> counts
-
+> use video ->switch database    
+> show collwctions -> show all tables under the database    
+> db.movies.find({"mpaaRating":"PG-13"}).pretty() -> show records in the movie table by mpaaRating filters    
+> db.movies.find({"mpaaRating":"PG-13"}).count() -> counts    
+> db.movies.find({"mpaaRating":"PG-13"},{title:1, \_id=0}) -> only show title for each records  1-show;0-not show
 - Load Data
    S1: set dir to the file location
    S2: load("filename")
 
 - Insert Document:
    db.movieScratch(collection name).insertOne({c1:"",...})
+
+- Update Documents ->upsert:update if exists, or insert:
+   db.movieScratch(collection name).updateOne({c1:"",...},{$set:{c2:"xxx"}})   the first {} is filter the records we want to update,{c2:} means the columns we want to modify
